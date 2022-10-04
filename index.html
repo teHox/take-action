@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  </head>
+  <body>
+    <div class="opacity"></div>
+    <header class="header">
+      <div class="header__wrapper">
+        <img src="img/logo.png" alt="" class="header__logo" />
+        <div class="header__right">
+          <nav class="header__menu">
+            <a href="#about-us" class="header__link">About us</a>
+            <a href="#projects" class="header__link">Our projects</a>
+            <a href="" class="header__link">Benefits of cooperation</a>
+            <a href="" class="header__link">Our Review</a>
+            <a href="" class="header__link">Contact</a>
+          </nav>
+          <div class="header__info">
+            <div class="header__lang">
+              <a href="" class="header__link current">UA</a>
+              <div class="header__stick">|</div>
+              <a href="" class="header__link">EN</a>
+            </div>
+            <button class="header__button">Contact us</button>
+          </div>
+        </div>
+        <div id="burger" class="burger-btn"><span></span></div>
+      </div>
+    </header>
+    <main>
+      <video
+        poster="img/video_poster.png"
+        autoplay
+        muted
+        preload="none"
+        loop
+        class="main-screen"
+      >
+        <source src="video/4-10-22.mp4" type="video/mp4" />
+      </video>
+      <div class="points">
+        <div class="container">
+          <div class="points__card">
+            <img src="img/points__first.png" alt="" class="points__img" />
+            <h3 class="sub-title">2,500 + PARTNERS</h3>
+            <p class="text">
+              During our work, we earned the trust of a large number of large
+              companies
+            </p>
+          </div>
+          <div class="points__card">
+            <img src="img/points__second.png" alt="" class="points__img" />
+            <h3 class="sub-title">30,000 + TRANSACTIONS</h3>
+            <p class="text">
+              For more than 5 years of fruitful work, more than 30,000 families
+              received new furniture.
+            </p>
+          </div>
+          <div class="points__card">
+            <img src="img/points__third.png" alt="" class="points__img" />
+            <h3 class="sub-title">MODERN EQUIPMENT</h3>
+            <p class="text">
+              On our minds, there are only a few modern signs of German charm.
+            </p>
+          </div>
+          <div class="points__card">
+            <img src="img/points__fourth.png" alt="" class="points__img" />
+            <h3 class="sub-title">QUALIFIED PERSONNEL</h3>
+            <p class="text">
+              Our company employs only highly qualified specialists.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="about-us" class="about-us">
+        <div class="about-us__before"></div>
+        <div class="about-us__after"></div>
+        <div class="container">
+          <div class="about-us__left">
+            <h2 class="title">ABOUT COMPANY</h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero
+              commodo sit phasellus mattis egetet. Pulvinar ipsum felis morbi et
+              ut facilisis. Pulvinar ipsum felis morbi et ut Lorem Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Libero commodo sit
+              phasellus mattis eget et. Pulvinar ipsum felis morbi et ut
+              facilisis.Pulvinar ipsum felis morbi et ut Lorem !!!
+            </p>
+          </div>
+          <div class="about-us__right">
+            <video muted loop id="myVideo">
+              <source src="video/4-10-22.mp4" type="video/mp4" />
+            </video>
+            <div class="about-us__play" id="myBtn" onclick="myFunction()">
+              <p class="text">Play</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="projects" class="projects">
+        <div class="container">
+          <h2 class="title">OUR PROJECTS</h2>
+          <div class="projects__categories">
+            <p id="tab-name-1" class="projects__tab">Cabinet furniture</p>
+            <p id="tab-name-2" class="projects__tab">Cabinet furniture</p>
+            <p id="tab-name-3" class="projects__tab">Cabinet furniture</p>
+            <p id="tab-name-4" class="projects__tab">Cabinet furniture</p>
+          </div>
+          <div id="tab-content-1" class="projects__content"></div>
+          <div id="tab-content-2" class="projects__content"></div>
+          <div id="tab-content-3" class="projects__content"></div>
+          <div id="tab-content-4" class="projects__content"></div>
+        </div>
+      </div>
+      <div class="news container relative">
+        <h2 class="title">our news</h2>
+        <div class="news-swiper-button-prev swiper-button-prev"></div>
+        <div class="news-swiper-button-next swiper-button-next"></div>
+        <div class="swiper news-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide news-slider__slide">
+              <div class="news-slider__wrapper">
+                <img src="./img/photo.png" class="news-slider__img" alt="" />
+                <h2 class="sub-title">Lorem ipsum</h2>
+                <p class="news-slider__date">October 03, 2022</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
+                  turpis viverra eget iaculis fames in nunc. In suspendisse
+                  pharetra quis sed quam. Enim eros nulla sed viverra ullamcorper
+                  adipiscing. Ligula faucibus augue neque eget sit vulputate at
+                  lectus.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide news-slider__slide">
+              <div class="news-slider__wrapper">
+                <img src="./img/photo.png" class="news-slider__img" alt="" />
+                <h2 class="sub-title">Lorem ipsum</h2>
+                <p class="news-slider__date">October 03, 2022</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
+                  turpis viverra eget iaculis fames in nunc. In suspendisse
+                  pharetra quis sed quam. Enim eros nulla sed viverra ullamcorper
+                  adipiscing. Ligula faucibus augue neque eget sit vulputate at
+                  lectus.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide news-slider__slide">
+              <div class="news-slider__wrapper">
+                <img src="./img/photo.png" class="news-slider__img" alt="" />
+                <h2 class="sub-title">Lorem ipsum</h2>
+                <p class="news-slider__date">October 03, 2022</p>
+                <p class="text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
+                  turpis viverra eget iaculis fames in nunc. In suspendisse
+                  pharetra quis sed quam. Enim eros nulla sed viverra ullamcorper
+                  adipiscing. Ligula faucibus augue neque eget sit vulputate at
+                  lectus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partners container relative">
+        <h2 class="title">MORE THAN 200 STORES WORK WITH US</h2>
+        <div class="relative">
+          <div class="partners-swiper-button-prev swiper-button-prev"></div>
+          <div class="partners-swiper-button-next swiper-button-next"></div>
+  
+          <div class="swiper partners-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide partners-slider__slide">
+                <img src="./img/p-1.png" alt="" />
+              </div>
+              <div class="swiper-slide partners-slider__slide">
+                <img src="./img/p-2.png" alt="" />
+              </div>
+              <div class="swiper-slide partners-slider__slide">
+                <img src="./img/p-3.png" alt="" />
+              </div>
+              <div class="swiper-slide partners-slider__slide">
+                <img src="./img/p-4.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="founders relative">
+        <div class="founders__after"></div>
+        <div class="founders__wrapper">
+          <h2 class="title title_white">COMPANY FOUNDERS</h2>
+          <div class="founders__flex container">
+            <div class="founders__item">
+              <img src="./img/Rectangle.png" class="founders__img" alt="" />
+              <h3 class="sub-title">Jajalii Artem</h3>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus ut
+                felis, vitae turpis ac id. Mi aliquam fringilla penatibus aliquam.
+                Mauris vitae dui proin vivamus non eget dolor at netus.
+              </p>
+            </div>
+            <div class="founders__item">
+              <img src="./img/Rectangle2.png" class="founders__img" alt="" />
+              <h3 class="sub-title">Jajalii Artem</h3>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus ut
+                felis, vitae turpis ac id. Mi aliquam fringilla penatibus aliquam.
+                Mauris vitae dui proin vivamus non eget dolor at netus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews container">
+        <h2 class="title">our reviews</h2>
+        <div class="swiper reviews-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide reviews-slider__slides">
+              <div class="flex-center">
+                <img class="reviews-slider__img" src="./img/Ellipse.png" alt="" />
+              </div>
+              <p class="reviews-slider__text">
+                Lorem ipsum dolor sit amet, Lorem ipsum adipiscing elit. Cras
+                consequat in ut ipsum ultricies imperdiet tellus. Phasellus leo
+                pellentesque et, tellus ante ultricies cursus ipsum faucibus.
+                Phasellus leo pellentesque et.Lorem ipsum dolor sit amet, Lorem
+                ipsum adipiscing elit.
+              </p>
+              <p class="reviews-slider__name">victor ivanov</p>
+            </div>
+            <div class="swiper-slide reviews-slider__slides">
+              <div class="flex-center">
+                <img class="reviews-slider__img" src="./img/Ellipse.png" alt="" />
+              </div>
+              <p class="reviews-slider__text">
+                Lorem ipsum dolor sit amet, Lorem ipsum adipiscing elit. Cras
+                consequat in ut ipsum ultricies imperdiet tellus. Phasellus leo
+                pellentesque et, tellus ante ultricies cursus ipsum faucibus.
+                Phasellus leo pellentesque et.Lorem ipsum dolor sit amet, Lorem
+                ipsum adipiscing elit.
+              </p>
+              <p class="reviews-slider__name">victor ivanov</p>
+            </div>
+            <div class="swiper-slide reviews-slider__slides">
+              <div class="flex-center">
+                <img class="reviews-slider__img" src="./img/Ellipse.png" alt="" />
+              </div>
+              <p class="reviews-slider__text">
+                Lorem ipsum dolor sit amet, Lorem ipsum adipiscing elit. Cras
+                consequat in ut ipsum ultricies imperdiet tellus. Phasellus leo
+                pellentesque et, tellus ante ultricies cursus ipsum faucibus.
+                Phasellus leo pellentesque et.Lorem ipsum dolor sit amet, Lorem
+                ipsum adipiscing elit.
+              </p>
+              <p class="reviews-slider__name">victor ivanov</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-end">
+          <div class="slide-prev">
+            <svg
+              width="21"
+              height="8"
+              viewBox="0 0 21 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                fill="#353535"
+              />
+            </svg>
+          </div>
+          <div class="slide-next">
+            <svg
+              width="21"
+              height="8"
+              viewBox="0 0 21 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                fill="#353535"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="contact container">
+        <h2 class="title">CONTACT US</h2>
+        <p class="text">
+          To get a consultation, ask a question or make an order, just call or
+          send a request.
+        </p>
+        <div class="contact__map">
+          <div class="contact__info">
+            <div>
+              <h3 class="sub-title">addres</h3>
+              <p class="text text-center">
+                Odessa, Generala Petrova Street 25B, office 1
+              </p>
+            </div>
+            <div>
+              <h3 class="sub-title">contacts</h3>
+              <div class="flex-center mb-15">
+                <svg
+                  class="mr-small"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.51089 2L7.15002 2.13169C7.91653 2.15942 8.59676 2.64346 8.89053 3.3702L9.96656 6.03213C10.217 6.65159 10.1496 7.35837 9.78693 7.91634L8.40831 10.0375C9.22454 11.2096 11.4447 13.9558 13.7955 15.5633L15.5484 14.4845C15.9939 14.2103 16.5273 14.1289 17.0314 14.2581L20.5161 15.1517C21.4429 15.3894 22.0674 16.2782 21.9942 17.2552L21.7705 20.2385C21.6919 21.2854 20.8351 22.1069 19.818 21.9887C6.39245 20.4276 -1.48056 1.99997 3.51089 2Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <div>
+                  <p class="text mb-15">+380977237148</p>
+                  <p class="text">+380506467424</p>
+                </div>
+              </div>
+  
+              <div class="flex-center">
+                <svg
+                  class="mr-small"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20 5.5L12 13L4 5.5"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text">jft.infor@gmail.com</p>
+              </div>
+            </div>
+            <div class="w-full">
+              <h3 class="sub-title">social</h3>
+  
+              <div class="flex-evenly">
+                <div class="social">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6Z"
+                      stroke="#353535"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.0001 16.4445C14.4547 16.4445 16.4445 14.4547 16.4445 12.0001C16.4445 9.54551 14.4547 7.55566 12.0001 7.55566C9.54551 7.55566 7.55566 9.54551 7.55566 12.0001C7.55566 14.4547 9.54551 16.4445 12.0001 16.4445Z"
+                      stroke="#353535"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18 6.0217V6"
+                      stroke="#353535"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="social">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 10L11 14L17 20L21 4L3 11L7 13L9 19L12 15"
+                      stroke="#353535"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="social">
+                  <svg
+                    width="14"
+                    height="22"
+                    viewBox="0 0 14 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 1H13V5H11C9.8954 5 9 5.89543 9 7V9H13L11.9565 13H8.8261V21H4.65217V13H1V9.0396H5V6C5 3.23858 7.2386 1 10 1Z"
+                      stroke="#353535"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <hr class="footer__line" />
+      <div class="footer__wrapper">
+        <div class="container flex-space">
+          <img src="./img/logo 2.png" alt="" />
+          <div class="text">© 2022 JFT. All rights reserved</div>
+          <div class="text">Powered by Lemurs Agency</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
