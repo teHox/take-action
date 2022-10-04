@@ -11,18 +11,12 @@ function domLoaded() {
     opacity.classList.toggle("opacity_active");
   });
 
-  var video = document.getElementById("myVideo");
-  var btn = document.getElementById("myBtn");
-
-  function myFunction() {
-    if (video.paused) {
-      video.play();
-      btn.innerHTML = "Play";
-    } else {
-      video.pause();
-      btn.innerHTML = "Pause";
-    }
-  }
+  const playButton = document.querySelector(".about-us__play");
+  const video = document.querySelector("#myVideo");
+  playButton.addEventListener("click", () => {
+    video.play();
+    playButton.style.display = "none";
+  });
 
   let tab = document.querySelectorAll(".projects__tab"),
     categories = document.querySelector(".projects__categories"),
@@ -57,6 +51,117 @@ function domLoaded() {
     }
   });
 
+  new Swiper(".projects-slider-1", {
+    //   slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next-1",
+      prevEl: ".projects-swiper-button-prev-1",
+    },
+    pagination: {
+      el: ".swiper-pagination-1",
+      type: "bullets",
+      dynamicBullets: "true",
+    },
+  });
+
+  new Swiper(".projects-slider-2", {
+    //   slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next-2",
+      prevEl: ".projects-swiper-button-prev-2",
+    },
+    pagination: {
+      el: ".swiper-pagination-2",
+      type: "bullets",
+      dynamicBullets: "true",
+    },
+  });
+
+  new Swiper(".projects-slider-3", {
+    //   slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next-3",
+      prevEl: ".projects-swiper-button-prev-3",
+    },
+    pagination: {
+      el: ".swiper-pagination-3",
+      type: "bullets",
+      dynamicBullets: "true",
+    },
+  });
+
+  new Swiper(".projects-slider-4", {
+    //   slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next-4",
+      prevEl: ".projects-swiper-button-prev-4",
+    },
+    pagination: {
+      el: ".swiper-pagination-4",
+      type: "bullets",
+      dynamicBullets: "true",
+    },
+  });
 
   new Swiper(".news-slider", {
     //   slidesPerView: 3,
@@ -80,7 +185,7 @@ function domLoaded() {
       prevEl: ".news-swiper-button-prev",
     },
   });
-  
+
   new Swiper(".partners-slider", {
     //   slidesPerView: 4,
     navigation: {
@@ -96,7 +201,7 @@ function domLoaded() {
       },
       768: {
         spaceBetween: 25,
-  
+
         slidesPerView: 2.8,
       },
       425: {
@@ -107,7 +212,7 @@ function domLoaded() {
       },
     },
   });
-  
+
   new Swiper(".reviews-slider", {
     //   slidesPerView: 3,
     spaceBetween: 30,
@@ -127,5 +232,4 @@ function domLoaded() {
       },
     },
   });
-  
 }
