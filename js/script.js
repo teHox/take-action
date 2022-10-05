@@ -159,13 +159,15 @@ function domLoaded() {
       1440: {
         slidesPerView: 4,
       },
-      1024: {
+      768: {
         slidesPerView: 3,
       },
-      768: {
+      550: {
         slidesPerView: 2,
       },
-
+      440: {
+        slidesPerView: 1.5,
+      },
       0: {
         slidesPerView: 1,
       },
