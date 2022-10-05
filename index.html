@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -25,7 +26,7 @@
           </nav>
           <div class="header__info">
             <div class="header__lang">
-              <a href="" class="header__link current">UA</a>
+              <a href="" class="header__link">UA</a>
               <div class="header__stick">|</div>
               <a href="" class="header__link">EN</a>
             </div>
@@ -138,7 +139,13 @@
             </p>
           </div>
           <div class="about-us__right">
-            <video muted loop id="myVideo">
+            <video
+              poster="img/video_poster.png"
+              preload="none"
+              muted
+              loop
+              id="myVideo"
+            >
               <source src="video/4-10-22.mp4" type="video/mp4" />
             </video>
             <div class="about-us__play" id="myBtn" onclick="myFunction()">
@@ -150,318 +157,340 @@
       <div id="projects" class="projects">
         <div class="container">
           <h2 class="title">OUR PROJECTS</h2>
-          <div class="projects__categories">
-            <p id="tab-name-1" class="projects__tab">Cabinet furniture</p>
-            <p id="tab-name-2" class="projects__tab">Cabinet furniture</p>
-            <p id="tab-name-3" class="projects__tab">Cabinet furniture</p>
-            <p id="tab-name-4" class="projects__tab">Cabinet furniture</p>
-          </div>
-          <div id="tab-content-1" class="projects__content">
-            <div class="projects-swiper-button-prev-1 swiper-button-prev">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="projects-swiper-button-next-1 swiper-button-next">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="swiper projects-slider-1">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide projects-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+          <div class="tabs">
+            <div class="t-btn-container">
+              <div class="swiper t-btn-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide t-btn-slider__slide">
+                    <p class="t-btn active" data-name="profile">
+                      Cabinet furniture
+                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+                  <div class="swiper-slide t-btn-slider__slide">
+                    <p class="t-btn" data-name="messages">
+                      Cushioned furniture
+                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+                  <div class="swiper-slide t-btn-slider__slide">
+                    <p class="t-btn" data-name="settings">
+                      Mattresses and accessories
+                    </p>
                   </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+                  <div class="swiper-slide t-btn-slider__slide">
+                    <p class="t-btn" data-name="wood">Wood furniture</p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-pagination-1"></div>
             </div>
-            <div class="projects__buttons">
-              <a href="">View catalog</a>
-              <a href="">Price</a>
-              <a href="">Product content</a>
-              <a href="">Remaining goods</a>
-            </div>
-          </div>
-          <div id="tab-content-2" class="projects__content">
-            <div class="projects-swiper-button-prev-2 swiper-button-prev">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="projects-swiper-button-next-2 swiper-button-next">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="swiper projects-slider-2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide projects-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
+
+            <div class="t-panel-container">
+              <div class="t-panel profile active">
+                <div class="projects-swiper-button-prev swiper-button-prev">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                      fill="#353535"
                     />
-                  </div>
+                  </svg>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
+                <div class="projects-swiper-button-next swiper-button-next">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                      fill="#353535"
                     />
-                  </div>
+                  </svg>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+                <div class="swiper projects-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide projects-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination swiper-pagination-2"></div>
-            </div>
-            <div class="projects__buttons">
-              <a href="">View catalog</a>
-              <a href="">Price</a>
-              <a href="">Remaining goods</a>
-            </div>
-          </div>
-          <div id="tab-content-3" class="projects__content">
-            <div class="projects-swiper-button-prev-3 swiper-button-prev">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="projects-swiper-button-next-3 swiper-button-next">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="swiper projects-slider-3">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide projects-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
+                <div class="projects__buttons">
+                  <a href="">View catalog</a>
+                  <a href="">Price</a>
+                  <a href="">Product content</a>
+                  <a href="">Remaining goods</a>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-pagination-3"></div>
-            </div>
-            <div class="projects__buttons">
-              <a href="">View catalog</a>
-              <a href="">Price</a>
-              <a href="">Product content</a>
-              <a href="">Remaining goods</a>
-            </div>
-          </div>
-          <div id="tab-content-4" class="projects__content">
-            <div class="projects-swiper-button-prev-4 swiper-button-prev">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="projects-swiper-button-next-4 swiper-button-next">
-              <svg
-                width="21"
-                height="8"
-                viewBox="0 0 21 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
-                  fill="#353535"
-                />
-              </svg>
-            </div>
-            <div class="swiper projects-slider-4">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide projects-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
+              <div class="t-panel messages">
+                <div class="projects-swiper-button-prev swiper-button-prev">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                      fill="#353535"
                     />
-                  </div>
+                  </svg>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
+                <div class="projects-swiper-button-next swiper-button-next">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                      fill="#353535"
                     />
-                  </div>
+                  </svg>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
+                <div class="swiper projects-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide projects-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-slide news-slider__slide">
-                  <div class="projects-slider__wrapper">
-                    <img
-                      src="./img/photo.png"
-                      class="news-slider__img"
-                      alt=""
-                    />
-                  </div>
+                <div class="projects__buttons">
+                  <a href="">View catalog</a>
+                  <a href="">Price</a>
+                  <a href="">Remaining goods</a>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-pagination-4"></div>
-            </div>
-            <div class="projects__buttons">
-              <a href="">View catalog</a>
-              <a href="">Price</a>
-              <a href="">Product content</a>
-              <a href="">Remaining goods</a>
-              <a href="">Remaining goods</a>
+              <div class="t-panel settings">
+                <div class="projects-swiper-button-prev swiper-button-prev">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                      fill="#353535"
+                    />
+                  </svg>
+                </div>
+                <div class="projects-swiper-button-next swiper-button-next">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                      fill="#353535"
+                    />
+                  </svg>
+                </div>
+                <div class="swiper projects-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide projects-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="projects__buttons">
+                  <a href="">View catalog</a>
+                  <a href="">Price</a>
+                  <a href="">Product content</a>
+                  <a href="">Remaining goods</a>
+                </div>
+              </div>
+              <div class="t-panel wood">
+                <div class="projects-swiper-button-prev swiper-button-prev">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                      fill="#353535"
+                    />
+                  </svg>
+                </div>
+                <div class="projects-swiper-button-next swiper-button-next">
+                  <svg
+                    width="21"
+                    height="8"
+                    viewBox="0 0 21 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                      fill="#353535"
+                    />
+                  </svg>
+                </div>
+                <div class="swiper projects-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide projects-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide news-slider__slide">
+                      <div class="projects-slider__wrapper">
+                        <img
+                          src="./img/photo.png"
+                          class="news-slider__img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="projects__buttons">
+                  <a href="">View catalog</a>
+                  <a href="">Price</a>
+                  <a href="">Product content</a>
+                  <a href="">Remaining goods</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -723,18 +752,14 @@
 
           <div class="swiper partners-slider">
             <div class="swiper-wrapper">
-              <div class="swiper-slide partners-slider__slide">
-                <img src="./img/p-1.png" alt="" />
-              </div>
-              <div class="swiper-slide partners-slider__slide">
-                <img src="./img/p-2.png" alt="" />
-              </div>
-              <div class="swiper-slide partners-slider__slide">
-                <img src="./img/p-3.png" alt="" />
-              </div>
-              <div class="swiper-slide partners-slider__slide">
-                <img src="./img/p-4.png" alt="" />
-              </div>
+              <a href="#" class="swiper-slide partners-slider__slide p-1">
+              </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-2">
+              </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-3">
+              </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-4">
+              </a>
             </div>
           </div>
         </div>
@@ -930,7 +955,7 @@
               <h3 class="sub-title">social</h3>
 
               <div class="flex-evenly">
-                <div class="social">
+                <a href="#" class="social">
                   <svg
                     width="24"
                     height="24"
@@ -960,8 +985,8 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-                <div class="social">
+                </a>
+                <a href="#" class="social">
                   <svg
                     width="24"
                     height="24"
@@ -977,8 +1002,8 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-                <div class="social">
+                </a>
+                <a href="#" class="social">
                   <svg
                     width="14"
                     height="22"
@@ -994,24 +1019,131 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <div id="popup-references" class="popup-references">
+      <div class="popup-references__body">
+        <div class="popup-references__wrapper">
+          <div class="popup-references__top">
+            <h2 class="title"></h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="#C1D0CC"
+              class="bi bi-x-circle popup-references__close"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </div>
+
+          <div class="popup-references__content">
+            <div class="popup-references__sliders">
+              <div class="popup-slider swiper-container swiper">
+                <div class="popup-slider__wrapper swiper-wrapper">
+                  <div class="popup-slider__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-slider__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-slider__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-slider__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-slider__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#E5F0ED"
+                  class="bi bi-arrow-left-circle-fill popup-slider__prev"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#E5F0ED"
+                  class="bi bi-arrow-right-circle-fill popup-slider__next"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                  />
+                </svg>
+              </div>
+              <div class="popup-thumbs swiper-container swiper">
+                <div class="popup-thumbs__wrapper swiper-wrapper">
+                  <div class="popup-thumbs__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-thumbs__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-thumbs__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-thumbs__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                  <div class="popup-thumbs__slide swiper-slide">
+                    <img src="./img/photo.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-references__text-content">
+              <h3 class="sub-title">Title</h3>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
+                officiis ad, id veniam molestiae quas hic earum assumenda dicta
+                soluta quasi, iste ratione suscipit vitae impedit iusto
+                explicabo officia placeat!
+              </p>
+              <p class="text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti recusandae fuga architecto sequi repellendus eligendi
+                dolores molestias eius ex alias, numquam laudantium dicta
+                laborum. Id accusamus asperiores eos tempore quis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <hr class="footer__line" />
       <div class="footer__wrapper">
         <div class="container flex-space">
           <img src="./img/logo 2.png" alt="" />
           <div class="text">© 2022 JFT. All rights reserved</div>
-          <div class="text">Powered by Lemurs Agency</div>
+          <div class="text">Powered by Lemurs <a href="">Agency</a></div>
         </div>
       </div>
     </footer>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
   </body>
 </html>

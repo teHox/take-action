@@ -15,22 +15,21 @@ function domLoaded() {
     const popUpShowButton = document.querySelector("#button-consultation");
     const popUp = document.querySelector("#consultation");
     const closeButton = document.querySelector("#close-consultation");
-  
+
     function closePopUp() {
       popUp.style.top = "-300%";
     }
-  
+
     popUpShowButton.addEventListener("click", () => {
       popUp.style.top = "0";
     });
-  
+
     popUp.addEventListener("click", function (e) {
       if (e.target == this) closePopUp();
     });
     closeButton.addEventListener("click", closePopUp);
   }
   window.addEventListener("load", popup);
-  
 
   const playButton = document.querySelector(".about-us__play");
   const video = document.querySelector("#myVideo");
@@ -39,154 +38,71 @@ function domLoaded() {
     playButton.style.display = "none";
   });
 
-  let tab = document.querySelectorAll(".projects__tab"),
-    categories = document.querySelector(".projects__categories"),
-    tabContent = document.querySelectorAll(".projects__content");
+  function initTab(elem) {
+    //addEventListener on mouse click
+    document.addEventListener("click", function (e) {
+      //check is the right element clicked
+      if (!e.target.matches(elem + " .t-btn")) return;
+      else {
+        if (!e.target.classList.contains("active")) {
+          //if option true remove active class from all other t-btn and t-panel
+          findActiveElementAndRemoveIt(elem + " .t-btn");
+          findActiveElementAndRemoveIt(elem + " .t-panel");
 
-  function hideTabContent(a) {
-    for (let i = a; i < tabContent.length; i++) {
-      tabContent[i].classList.remove("show");
-      tabContent[i].classList.add("hide");
-    }
-  }
+          //add active class on clicked tab
+          e.target.classList.add("active");
 
-  hideTabContent(1);
-
-  function showTabContent(b) {
-    if (tabContent[b].classList.contains("hide")) {
-      tabContent[b].classList.remove("hide");
-      tabContent[b].classList.add("show");
-    }
-  }
-
-  categories.addEventListener("click", function (event) {
-    let target = event.target;
-    if (target && target.classList.contains("projects__tab")) {
-      for (let i = 0; i < tab.length; i++) {
-        if (target == tab[i]) {
-          hideTabContent(0);
-          showTabContent(i);
-          break;
+          setTimeout(function () {
+            var panel = document.querySelectorAll(
+              elem + " .t-panel." + e.target.dataset.name
+            );
+            Array.prototype.forEach.call(panel, function (el) {
+              //add active class on right t-panel after 200ms because of the smooth animation
+              el.classList.add("active");
+            });
+          }, 200);
         }
       }
-    }
-  });
+    });
+  }
 
-  new Swiper(".projects-slider-1", {
+  //if option true remove active class from added element
+  function findActiveElementAndRemoveIt(elem) {
+    var elementList = document.querySelectorAll(elem);
+    Array.prototype.forEach.call(elementList, function (e) {
+      e.classList.remove("active");
+    });
+  }
+
+  //activate tabs function
+  initTab(".tabs");
+
+  new Swiper(".t-btn-slider", {
     //   slidesPerView: 3,
-    spaceBetween: 30,
     breakpoints: {
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 4,
       },
       768: {
-        slidesPerView: 2.2,
+        slidesPerView: 3,
       },
       425: {
-        slidesPerView: 1.2,
+        slidesPerView: 2,
       },
       0: {
         slidesPerView: 1,
       },
     },
     navigation: {
-      nextEl: ".projects-swiper-button-next-1",
-      prevEl: ".projects-swiper-button-prev-1",
-    },
-    pagination: {
-      el: ".swiper-pagination-1",
-      type: "bullets",
-      dynamicBullets: "true",
-    },
-  });
-
-  new Swiper(".projects-slider-2", {
-    //   slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      425: {
-        slidesPerView: 1.2,
-      },
-      0: {
-        slidesPerView: 1,
-      },
-    },
-    navigation: {
-      nextEl: ".projects-swiper-button-next-2",
-      prevEl: ".projects-swiper-button-prev-2",
-    },
-    pagination: {
-      el: ".swiper-pagination-2",
-      type: "bullets",
-      dynamicBullets: "true",
-    },
-  });
-
-  new Swiper(".projects-slider-3", {
-    //   slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      425: {
-        slidesPerView: 1.2,
-      },
-      0: {
-        slidesPerView: 1,
-      },
-    },
-    navigation: {
-      nextEl: ".projects-swiper-button-next-3",
-      prevEl: ".projects-swiper-button-prev-3",
-    },
-    pagination: {
-      el: ".swiper-pagination-3",
-      type: "bullets",
-      dynamicBullets: "true",
-    },
-  });
-
-  new Swiper(".projects-slider-4", {
-    //   slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      425: {
-        slidesPerView: 1.2,
-      },
-      0: {
-        slidesPerView: 1,
-      },
-    },
-    navigation: {
-      nextEl: ".projects-swiper-button-next-4",
-      prevEl: ".projects-swiper-button-prev-4",
-    },
-    pagination: {
-      el: ".swiper-pagination-4",
-      type: "bullets",
-      dynamicBullets: "true",
+      nextEl: ".news-swiper-button-next",
+      prevEl: ".news-swiper-button-prev",
     },
   });
 
   new Swiper(".news-slider", {
     //   slidesPerView: 3,
     spaceBetween: 30,
+    loop: "true",
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -198,6 +114,7 @@ function domLoaded() {
         slidesPerView: 1.2,
       },
       0: {
+        centeredSlides: "true",
         slidesPerView: 1,
       },
     },
@@ -213,6 +130,7 @@ function domLoaded() {
       nextEl: ".partners-swiper-button-next",
       prevEl: ".partners-swiper-button-prev",
     },
+    loop: "true",
     breakpoints: {
       1440: {
         slidesPerView: 4,
@@ -229,6 +147,7 @@ function domLoaded() {
         slidesPerView: 1.8,
       },
       0: {
+        centeredSlides: "true",
         slidesPerView: 1,
       },
     },
@@ -237,6 +156,7 @@ function domLoaded() {
   new Swiper(".reviews-slider", {
     //   slidesPerView: 3,
     spaceBetween: 30,
+    loop: "true",
     navigation: {
       nextEl: ".slide-next",
       prevEl: ".slide-prev",
@@ -248,9 +168,94 @@ function domLoaded() {
       768: {
         slidesPerView: 2,
       },
-      425: {
+      0: {
+        centeredSlides: "true",
         slidesPerView: 1,
       },
     },
+  });
+
+  articleSliderInit();
+  newsSliderInit();
+}
+
+function articleSliderInit() {
+  const popUpRefLeft = document.querySelector(".projects-swiper-button-next");
+
+  const popUpRefRight = document.querySelector(".projects-swiper-button-prev");
+
+  const paginationSlide = document.querySelector(".swiper-pagination");
+
+  new Swiper(".projects-slider", {
+    //   slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        centeredSlides: "true",
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: popUpRefLeft,
+      prevEl: popUpRefRight,
+    },
+    pagination: {
+      el: paginationSlide,
+      type: "bullets",
+      dynamicBullets: "true",
+      clickable: "true",
+    },
+  });
+}
+
+function newsSliderInit() {
+  const tPpanel = document.querySelectorAll(".t-panel");
+
+  tPpanel.forEach((e) => {
+    const popUpRefLeft = e.querySelector(".projects-swiper-button-next");
+
+    const popUpRefRight = e.querySelector(".projects-swiper-button-prev");
+
+    const paginationSlide = e.querySelector(".swiper-pagination");
+
+    const slider = e.querySelector(".projects-slider");
+
+    new Swiper(slider, {
+      spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      425: {
+        slidesPerView: 1.2,
+      },
+      0: {
+        centeredSlides: "true",
+        slidesPerView: 1,
+      },
+    },
+    navigation: {
+      nextEl: popUpRefLeft,
+      prevEl: popUpRefRight,
+    },
+    pagination: {
+      el: paginationSlide,
+      type: "bullets",
+      dynamicBullets: "true",
+      clickable: "true",
+    },
+    });
   });
 }
