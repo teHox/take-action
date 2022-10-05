@@ -108,9 +108,11 @@ function domLoaded() {
         slidesPerView: 3,
       },
       768: {
+        centeredSlides: "false",
         slidesPerView: 2.2,
       },
       425: {
+        centeredSlides: "true",
         slidesPerView: 1.2,
       },
       0: {
@@ -139,16 +141,12 @@ function domLoaded() {
         slidesPerView: 3.2,
       },
       768: {
-        spaceBetween: 25,
-
         slidesPerView: 2.8,
       },
-      425: {
-        slidesPerView: 1.8,
-      },
       0: {
+        spaceBetween: 25,
         centeredSlides: "true",
-        slidesPerView: 1,
+        slidesPerView: 1.8,
       },
     },
   });
