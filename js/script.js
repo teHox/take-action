@@ -112,8 +112,8 @@ function domLoaded() {
       },
     },
     navigation: {
-      nextEl: ".news-swiper-button-next",
-      prevEl: ".news-swiper-button-prev",
+      nextEl: ".t-btn-swiper-button-next",
+      prevEl: ".t-btn-swiper-button-prev",
     },
   });
 
@@ -146,6 +146,7 @@ function domLoaded() {
 
   new Swiper(".partners-slider", {
     //   slidesPerView: 4,
+    spaceBetween: 25,
     navigation: {
       nextEl: ".partners-swiper-button-next",
       prevEl: ".partners-swiper-button-prev",
@@ -161,10 +162,21 @@ function domLoaded() {
       768: {
         slidesPerView: 2.8,
       },
-      0: {
-        spaceBetween: 25,
-        centeredSlides: "true",
+      425: {
+        
         slidesPerView: 1.8,
+      },
+      360: {
+        centeredSlides: "true",
+        slidesPerView: 1.5,
+      },
+      340: {
+        centeredSlides: "true",
+        slidesPerView: 1.3,
+      },
+      0: {
+        centeredSlides: "true",
+        slidesPerView: 1.25,
       },
     },
   });

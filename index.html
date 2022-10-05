@@ -83,7 +83,6 @@
         poster="img/video_poster.png"
         autoplay
         muted
-        preload="none"
         loop
         class="main-screen"
       >
@@ -159,6 +158,34 @@
           <h2 class="title">OUR PROJECTS</h2>
           <div class="tabs">
             <div class="t-btn-container">
+              <div class="t-btn-arrows">
+                <svg
+                width="21"
+                height="8"
+                viewBox="0 0 21 8"
+                class="t-btn-swiper-button-prev swiper-button-prev"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.646446 4.35355C0.451185 4.15829 0.451185 3.84171 0.646446 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646446 4.35355ZM21 4.5H1V3.5H21V4.5Z"
+                  fill="#353535"
+                />
+              </svg>
+              <svg
+                width="21"
+                height="8"
+                viewBox="0 0 21 8"
+                class="t-btn-swiper-button-next swiper-button-next"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                  fill="#353535"
+                />
+              </svg>
+              </div>
               <div class="swiper t-btn-slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide t-btn-slider__slide">
@@ -181,8 +208,8 @@
                   </div>
                 </div>
               </div>
+              
             </div>
-
             <div class="t-panel-container">
               <div class="t-panel profile active">
                 <div class="projects-swiper-button-prev swiper-button-prev">
@@ -334,6 +361,7 @@
                 <div class="projects__buttons">
                   <a href="">View catalog</a>
                   <a href="">Price</a>
+                  <a href="">Product content</a>
                   <a href="">Remaining goods</a>
                 </div>
               </div>
@@ -752,14 +780,10 @@
 
           <div class="swiper partners-slider">
             <div class="swiper-wrapper">
-              <a href="#" class="swiper-slide partners-slider__slide p-1">
-              </a>
-              <a href="#" class="swiper-slide partners-slider__slide p-2">
-              </a>
-              <a href="#" class="swiper-slide partners-slider__slide p-3">
-              </a>
-              <a href="#" class="swiper-slide partners-slider__slide p-4">
-              </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-1"> </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-2"> </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-3"> </a>
+              <a href="#" class="swiper-slide partners-slider__slide p-4"> </a>
             </div>
           </div>
         </div>
@@ -892,7 +916,15 @@
           send a request.
         </p>
         <div class="contact__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.918496784257!2d30.709235999999997!3d46.43049500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633a81c508783%3A0x48e4ca8caefc3118!2z0LLRg9C70LjRhtGPINCT0LXQvdC10YDQsNC70LAg0J_QtdGC0YDQvtCy0LAsIDI10LEsINCe0LTQtdGB0LAsINCe0LTQtdGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA2NTA2NQ!5e0!3m2!1suk!2sua!4v1664957299623!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.918496784257!2d30.709235999999997!3d46.43049500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633a81c508783%3A0x48e4ca8caefc3118!2z0LLRg9C70LjRhtGPINCT0LXQvdC10YDQsNC70LAg0J_QtdGC0YDQvtCy0LAsIDI10LEsINCe0LTQtdGB0LAsINCe0LTQtdGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA2NTA2NQ!5e0!3m2!1suk!2sua!4v1664957299623!5m2!1suk!2sua"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
           <div class="contact__info">
             <div>
               <h3 class="sub-title">addres</h3>
