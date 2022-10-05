@@ -1,5 +1,5 @@
 function popupSec() {
-  const popUpSecShowButton = document.querySelectorAll(".news-slider__slide ");
+  const popUpSecShowButton = document.querySelectorAll(".news-slider__slide1 ");
   const popUpSec = document.querySelector("#popup-references");
   const closeButtonSec = document.querySelector(".popup-references__close");
 
@@ -36,6 +36,27 @@ function popupSec() {
     thumbs: {
       swiper: popupThumbs,
     },
+  });
+
+  const popUpSecShowButton2 = document.querySelectorAll(".slide2 ");
+  const popUpSec2 = document.querySelector("#popup-references2");
+  const closeButtonSec2 = document.querySelectorAll(".popup-references__close");
+
+  function closePopUpSec() {
+    popUpSec2.style.top = "-300%";
+  }
+  popUpSecShowButton2.forEach((e) => {
+    e.addEventListener("click", () => {
+      popUpSec2.style.top = "0";
+    });
+  });
+
+  popUpSec2.addEventListener("click", function (e) {
+    if (e.target == this) closePopUpSec();
+  });
+
+  closeButtonSec2.forEach((closeButtonSec) => {
+    closeButtonSec.addEventListener("click", closePopUpSec);
   });
 }
 window.addEventListener("load", popupSec);
