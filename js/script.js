@@ -2,14 +2,32 @@ window.addEventListener("DOMContentLoaded", domLoaded);
 
 function domLoaded() {
   const burgerBtn = document.querySelector(".burger-btn");
-  const headerMenu = document.querySelector(".header__right");
+  const headerRight = document.querySelector(".header__right");
   const opacity = document.querySelector(".opacity");
 
   burgerBtn.addEventListener("click", () => {
     burgerBtn.classList.toggle("burger-btn_active");
-    headerMenu.classList.toggle("header__right_active");
+    headerRight.classList.toggle("header__right_active");
     opacity.classList.toggle("opacity_active");
   });
+
+  const link = document.querySelector(".header__link");
+  link.addEventListener("click", () => {
+    burgerBtn.classList.remove("burger-btn_active");
+    headerRight.classList.remove("header__right_active");
+    opacity.classList.remove("opacity_active");
+  });
+
+  // const headerMenu = document.querySelector(".header__menu");
+
+  // headerMenu.forEach((e) => {
+  //   const link = e.querySelector(".header__link");
+  //   link.addEventListener("click", () => {
+  //     burgerBtn.classList.remove("burger-btn_active");
+  //     headerRight.classList.remove("header__right_active");
+  //     opacity.classList.remove("opacity_active");
+  //   });
+  // });
 
   function popup() {
     const popUpShowButton = document.querySelector("#button-consultation");
@@ -231,31 +249,31 @@ function newsSliderInit() {
     new Swiper(slider, {
       spaceBetween: 30,
       loop: "true",
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2.2,
+        },
+        425: {
+          slidesPerView: 1.2,
+        },
+        0: {
+          centeredSlides: "true",
+          slidesPerView: 1,
+        },
       },
-      768: {
-        slidesPerView: 2.2,
+      navigation: {
+        nextEl: popUpRefLeft,
+        prevEl: popUpRefRight,
       },
-      425: {
-        slidesPerView: 1.2,
+      pagination: {
+        el: paginationSlide,
+        type: "bullets",
+        dynamicBullets: "true",
+        clickable: "true",
       },
-      0: {
-        centeredSlides: "true",
-        slidesPerView: 1,
-      },
-    },
-    navigation: {
-      nextEl: popUpRefLeft,
-      prevEl: popUpRefRight,
-    },
-    pagination: {
-      el: paginationSlide,
-      type: "bullets",
-      dynamicBullets: "true",
-      clickable: "true",
-    },
     });
   });
 }
