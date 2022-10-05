@@ -187,6 +187,7 @@ function articleSliderInit() {
   new Swiper(".projects-slider", {
     //   slidesPerView: 3,
     spaceBetween: 30,
+    loop: "true",
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -229,6 +230,7 @@ function newsSliderInit() {
 
     new Swiper(slider, {
       spaceBetween: 30,
+      loop: "true",
     breakpoints: {
       1024: {
         slidesPerView: 3,
